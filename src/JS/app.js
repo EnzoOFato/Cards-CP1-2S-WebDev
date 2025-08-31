@@ -59,6 +59,8 @@ dicPosicoes = {
 }
 
 window.onload = function(){
+  carregaDados()
+  salvaDados()
   displayJogadoras()
   document.querySelector('.card-container').addEventListener('click', favoritar);
 }
@@ -87,7 +89,7 @@ function displayJogadoras(){
           </div>
           <div class='extra'>
             <p>${posicaoAbreviada}</p>
-            <button data-action='favoritar' data-index='${index}'>${jogadora.favorita ? `<img src='src/assets/favorito.png'>` : `<img src='src/assets/neutro.png'>`}</button>
+            <button data-index='${index}'>${jogadora.favorita ? `<img src='src/assets/favorito.png'>` : `<img src='src/assets/neutro.png'>`}</button>
           </div>
         </div>
         `
@@ -104,5 +106,17 @@ function favoritar(e){
   else{
     dadosBase[index].favorita = true
   }
+  salvaDados()
   displayJogadoras()
+}
+
+function salvaDados() {
+    localStorage.setItem("dadosBase", JSON.stringify(dadosBase));
+}
+
+function carregaDados() {
+    const dadosArmazenados = localStorage.getItem("dadosBase");
+    if (dadosArmazenados) {
+        dadosBase = JSON.parse(dadosArmazenados);
+    }
 }
