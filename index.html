@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards</title>
+    <link rel="stylesheet" href="src/CSS/style.css">
+</head>
+<body>
+    <header>
+        <img src="src/assets/icone-bola.png" alt="Ícone">
+        <h1>Passa Bola Cards</h1>
+        <img src="src/assets/icone-carta.png" alt="">
+    </header>
+    <div class="acoes">
+        <button id="adicionar" data-modal="form-modal">ADD</button>
+    </div>
+    <div class="container">
+        <h1 id="Principais">Principais jogadoras</h1>
+        <div class="card-container"></div>
+    </div>
+    <dialog id="form-modal">
+            <div class="modal-header">
+                <h1 id="modal-titulo">Adicionar jogadora</h1>
+                <button id="fecha-modal">X</button>
+            </div>
+        <form id="formulario">
+            <div class="input-holder">
+                <label for="nome-input">Digite o nome da jogadora:</label>
+                <input type="text" id="nome-input">
+            </div>
+            <div class="input-holder">
+                <label for="clube-input">Digite o clube da jogadora:</label>
+                <input type="text" id="clube-input">
+            </div>
+            <div class="input-holder">
+                <label for="imagem-input">Digite a url de uma imagem para jogadora:</label>
+                <input type="url" id="imagem-input">
+            </div>
+            <div class="input-holder">
+                <label for="gol-input">Gols</label>
+                <input type="number" min="0" id="gol-input">
+                <label for="ass-input">Assintências</label>
+                <input type="number" min="0" id="ass-input">
+                <label for="jogos-input">Jogos</label>
+                <input type="number" min="0" id="jogos-input">
+            </div>
+            <div class="input-holder">
+                <label for="posicao-select">Selecione a posição da jogadora:</label>
+                <select id="posicao-select">
+                    <option value="Goleira">Goleira</option>
+                    <option value="Zagueira">Zagueira</option>
+                    <option value="Meio-campo">Meio Campo</option>
+                    <option value="Atacante">Atacante</option>
+                </select>
+            </div>
+            <button type="submit" id="salva-jogadora">Salvar</button>
+            <button type="submit" id="atualiza-jogadora" style="display: none;">Atualizar</button>
+        </form>
+    </dialog>
+    <script src="src/JS/app.js"></script>
+</body>
+</html>
