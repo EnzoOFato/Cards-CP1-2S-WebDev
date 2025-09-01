@@ -21,7 +21,7 @@
     </div>
     <dialog id="form-modal">
             <div class="modal-header">
-                <h1>Adicionar jogadora</h1>
+                <h1 id="modal-titulo">Adicionar jogadora</h1>
                 <button id="fecha-modal">X</button>
             </div>
         <form id="formulario">
@@ -46,15 +46,16 @@
                 <input type="number" min="0" id="jogos-input">
             </div>
             <div class="input-holder">
-                <label for="posicao-select">Digite a posição da jogadora:</label>
+                <label for="posicao-select">Selecione a posição da jogadora:</label>
                 <select id="posicao-select">
                     <option value="Goleira">Goleira</option>
                     <option value="Zagueira">Zagueira</option>
                     <option value="Meio-campo">Meio Campo</option>
-                    <option value="Atcante">Atacante</option>
+                    <option value="Atacante">Atacante</option>
                 </select>
             </div>
             <button type="submit" id="salva-jogadora">Salvar</button>
+            <button type="submit" id="atualiza-jogadora" style="display: none;">Atualizar</button>
         </form>
     </dialog>
     <script src="src/JS/app.js"></script>

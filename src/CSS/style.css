@@ -144,8 +144,6 @@ header img{
 }
 
 #form-modal{
-    display: flex;
-    position: relative;
     flex-direction: column;
     padding: 20px 5%;
     justify-self: center;
@@ -193,4 +191,38 @@ header img{
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.ud-btn{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid rgb(0,128,128);
+}
+
+.ud-btn:nth-child(1){
+    background-color: rgba(60, 140, 210, 0.2);
+    color: blue;
+}
+
+.ud-btn:nth-child(2){
+    background-color: rgba(0, 199, 199, 0.2);
+    color: red;
+}
+
+.ud-btn:hover{
+    transform:scale(1.1);
+    transition-duration: 1s;
+    background-color: rgba(0, 199, 199, 0.8);
+}
+
+#atualiza-jogadora{
+    width: 100%;
+    margin-top: 10px;
+    background-color: rgb(120, 120, 240);
+    padding: 10px 5px;
+    font-size: 16px;
+    border-color: rgb(0,128,128);
+    cursor: pointer;
 }
