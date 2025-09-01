@@ -62,7 +62,11 @@ window.onload = function(){
   carregaDados()
   salvaDados()
   displayJogadoras()
-  document.querySelector('.card-container').addEventListener('click', favoritar);
+
+  document.querySelector(".card-container").addEventListener("click", favoritar)
+  document.querySelector("#adicionar").addEventListener("click", abrirModal)
+  document.querySelector("#fecha-modal").addEventListener("click", fecharModal)
+  document.querySelector("#formulario").addEventListener("submit", adicionaJogadora)
 }
 
 function displayJogadoras(){
@@ -119,4 +123,47 @@ function carregaDados() {
     if (dadosArmazenados) {
         dadosBase = JSON.parse(dadosArmazenados);
     }
+}
+
+function abrirModal(){
+  const modal = document.querySelector("#form-modal")
+  modal.showModal()
+}
+
+function fecharModal(){
+  const modal = document.querySelector("#form-modal")
+  modal.close()
+}
+
+function adicionaJogadora(e){
+  e.preventDefault()
+
+  const nome = document.querySelector("#nome-input").value
+  const clube = document.querySelector("#clube-input").value
+  const imagem = document.querySelector("#imagem-input").value
+  const posicao = document.querySelector("#posicao-select").value
+  const gols = document.querySelector("#gol-input").value
+  const assintencias = document.querySelector("#ass-input").value
+  const jogos = document.querySelector("#jogos-input").value
+
+  novaJogadora = {
+    "nome": nome,
+    "posicao": posicao,
+    "clube": clube,
+    "foto": imagem,
+    "gols": gols,
+    "assistencias": assintencias,
+    "jogos": jogos,
+    "favorita": false
+  }
+
+  dadosBase.push(novaJogadora)
+  salvaDados()
+
+  document.querySelector("#formulario").reset()
+  displayJogadoras()
+
+  document.querySelector("#form-modal").close()
+
+  alert(`Jogadora ${nome} cadastrada com sucesso!`)
 }

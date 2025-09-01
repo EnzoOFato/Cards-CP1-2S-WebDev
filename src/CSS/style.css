@@ -6,7 +6,7 @@
     font-family: "Fugaz One", sans-serif;
 }
 body{
-    background-color: rgb(20, 25, 26);
+    background-color: rgb(20, 25, 25);
 }
 header{
     width: 100%;
@@ -29,7 +29,7 @@ header img{
 }
 .container{
     width: 80%;
-    margin: 100px 10%;
+    margin: 0 10% 100px 10%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,8 +41,8 @@ header img{
     color: rgb(240, 240, 240);
 }
 .card-jogadora{
-    width: 60%;
-    height: 500px;
+    width: 75%;
+    height: 600px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -98,7 +98,7 @@ header img{
     border: 1px solid rgb(0,128,128);
     margin-bottom: 20px;
     row-gap: 5px;
-    padding: 0 5px;
+    padding: 10px 20px;
 }
 .stats h1{
     font-weight: normal;
@@ -122,4 +122,75 @@ header img{
 }
 .extra p{
     text-shadow: 2px 2px 1px rgb(15, 20, 80);
+}
+
+.acoes {
+    width: 80%;
+    margin: 0 10%;
+    margin-top: 100px;
+}
+#adicionar{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: rgb(110, 220, 110);
+    color: rgb(245, 245, 245);
+    text-shadow: 1px 1px black;
+}
+#adicionar:hover{
+    background-color: rgb(120, 240, 120);
+    cursor: pointer;
+}
+
+#form-modal{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 20px 5%;
+    justify-self: center;
+    color: rgb(245, 245, 245);
+    background-color: rgb(20, 25, 25);
+    border-color: rgb(0,128,128);
+    font-weight: lighter;
+}
+#fecha-modal{
+    background-color: transparent;
+    color: gray;
+    border: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#fecha-modal:hover{
+    border: 1px solid rgba(0, 255, 255, 0.2);
+    transition-duration: 0.5s;
+}
+
+.input-holder{
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+#salva-jogadora{
+    width: 100%;
+    margin-top: 10px;
+    background-color: rgb(120, 240, 120);
+    padding: 10px 5px;
+    font-size: 16px;
+    border-color: rgb(0,128,128);
+    cursor: pointer;
+}
+
+#salva-jogadora:hover{
+    background-color: rgb(150, 250, 150);
+    color: white;
+    transition-duration: 0.5s;
+}
+
+.modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
