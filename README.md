@@ -17,3 +17,4 @@ com o usuário podendo criar, atualizar e deletar quaisquer cartas.
 # Enzo Amá Fatobene Rm: 562138
 
 # Link gitHub Pages
+https://enzoofato.github.io/Cards-CP1-2S-WebDev/
