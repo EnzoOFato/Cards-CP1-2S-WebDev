@@ -13,7 +13,7 @@ Repositório que servirá como 1º Checkpoint do segundo semestre da disciplina 
 Como já dito antes, é um projeto para prticar CRUD, porém para além disso encrontramos aqui um projeto o qual permite o usuário manipular cartas de jogadoras de futebol no estilo colecionável
 com o usuário podendo criar, atualizar e deletar quaisquer cartas.
 
-# IntegranteS
+## Integrante(s)
 # Enzo Amá Fatobene Rm: 562138
 
-# Link gitHub Pages:
+# Link gitHub Pages
